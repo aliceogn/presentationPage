@@ -50,42 +50,24 @@ main {
     height: 70vh;
     display: flex;
     justify-content: space-around;
-}
-main .activities {
-    display: flex;
-    justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 50%;
-    height: 100%;
 }
-.activities a {
-    flex: 40%;
-    font-size: 40px;
+    
+
+main a {
     font-weight: bold;
-}
-.proj {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    width: 50%;
-}
-.proj a {
-    flex: 60%;
-    font-size: 40px;
-    font-weight: bold;
-}
-main div a {
     padding-top: 5.5rem;
     text-align: center;
     text-transform: uppercase;
-    font-size: 20px;
-    font-weight: normal;
+    font-size: 40px;
+    font-weight: bold;
+    width: 50%;
 }
-main div a:hover, main a:focus {
+main a:hover, main a:focus {
     background-color: gainsboro;
 }
 footer {
-    height: 11.7vh;
+    height: 11.5vh;
     margin-top: -5vh;
 }
 footer h4 {
@@ -95,23 +77,23 @@ footer h4 {
     padding-top: 2rem;
 }
 /*colours main*/
-.activities :nth-child(4) {
+main :first-child {
     background-color: #51294B;
     color: #FFFF;
 }
-.activities :nth-child(2) {
+main :nth-child(2) {
     background-color: #0adeff;
     color: black;
 }
-.activities :nth-child(3), .proj :first-child {
+main :nth-child(3){
     background-color: #c42aad;
     color: #FFFF;
 }
-.activities :first-child, .proj :nth-child(2) {
+main :nth-child(4) {
     background-color: #FFFF;
     color: black;
 }
-.activities *:hover, .activities *:focus, .proj *:hover, .proj *:focus {
+main a:hover, main a:focus {
     background-color: #e0218a;
     color: #FFFF;
 }
