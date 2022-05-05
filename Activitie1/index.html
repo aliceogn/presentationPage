@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activitie1</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="horizontal" id="row1">
+            <img id="img1" src="./pic1s.jpg" alt="Before editing" class="pic">
+
+            <img id="img2" src="./pic2s.jpg" alt="After editing" class="pic">
+        </div>
+
+        <div class="horizontal" id="row2">
+            <img id="img3" src="./pic3s.jpg" alt="The example photo, edited" class="pic">
+
+            <img id="img4" src="./pic4s.jpg" alt="Copying the editing style of the previous photo" class="pic">
+        </div> 
+        <div class="horizontal" id="row3">
+            <img id="img5" src="./pic5s.jpg" alt="Before editing" class="pic">
+
+            <img id="img6" src="./pic6s.jpg" alt="After editing" class="pic">
+        </div> 
+
+        <div id="myModal" class="modal">
+            <!--close button-->
+            <span class="close">&times;</span>
+            <!--big image-->
+            <img class="modal-content" id="img01" src="pic1l.jpg">
+            <div id="caption"></div>
+        </div>
+    </div>
+</body>
+<script>
+    //get the modal
+    const modal = document.getElementById('myModal');
+    //get the img and insert it inside the modal
+    const img1 = document.querySelector("#img1");
+    const modalImg = document.querySelector("#img01");
+    var captionText = document.getElementsByClassName("caption");
+    var i;
+    img1.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+    const img2 = document.querySelector("#img2");
+    img2.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+    const img3 = document.querySelector("#img3");
+    img3.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+    const img4 = document.querySelector("#img4");
+    img4.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+    const img5 = document.querySelector("#img5");
+    img5.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+    const img6 = document.querySelector("#img6");
+    img6.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+    /*for(i = 0; i < img.length; i++) {
+        img[i].onclick = function(evt) {
+            modal.style.display = "block";
+            modalImg.src = this.src;//.substring(0,4).concat("l");
+            captionText.innerHTML = this.alt;
+        }
+    }*/
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+</script>
+</html>
